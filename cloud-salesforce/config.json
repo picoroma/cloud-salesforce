@@ -1,0 +1,950 @@
+{
+   "hosttemplate" : [
+      {
+         "description" : "This template monitors Salesforce.com organizational limits using the API found here: https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/dome_limits.htm",
+         "has_icon" : "0",
+         "managementurls" : [],
+         "name" : "Cloud - Salesforce",
+         "servicechecks" : [
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC ConcurrentAsyncGetReportInstances",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC ConcurrentSyncReportRuns",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DailyApiRequests",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DailyAsyncApexExecutions",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DailyBulkApiRequests",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DailyGenericStreamingApiEvents",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DailyStreamingApiEvents",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DailyWorkflowEmails",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC DataStorageMB",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC FileStorageMB",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC HourlyAsyncReportRuns",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC HourlyDashboardRefreshes",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC HourlyDashboardResults",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC HourlyDashboardStatuses",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC HourlySyncReportRuns",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC HourlyTimeBasedWorkflow",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC MassEmail",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC SingleEmail",
+               "timed_exception" : null
+            },
+            {
+               "event_handler" : null,
+               "exception" : null,
+               "name" : "SFDC StreamingApiConcurrentClients",
+               "timed_exception" : null
+            }
+         ]
+      }
+   ],
+   "servicecheck" : [
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m ConcurrentAsyncGetReportInstances -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce ConcurrentAsyncGetReportInstances",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC ConcurrentAsyncGetReportInstances",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m ConcurrentSyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce ConcurrentSyncReportRuns",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC ConcurrentSyncReportRuns",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DailyApiRequests -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DailyApiRequests",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DailyApiRequests",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DailyAsyncApexExecutions -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DailyAsyncApexExecutions",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DailyAsyncApexExecutions",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DailyBulkApiRequests -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DailyBulkApiRequests",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DailyBulkApiRequests",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DailyGenericStreamingApiEvents -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DailyGenericStreamingApiEvents",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DailyGenericStreamingApiEvents",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DailyStreamingApiEvents -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DailyStreamingApiEvents",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DailyStreamingApiEvents",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DailyWorkflowEmails -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DailyWorkflowEmails",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DailyWorkflowEmails",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m DataStorageMB -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce DataStorageMB metric",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC DataStorageMB",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m FileStorageMB -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce FileStorageMB",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC FileStorageMB",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m HourlyAsyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce HourlyAsyncReportRuns",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC HourlyAsyncReportRuns",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m HourlyDashboardRefreshes -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce HourlyDashboardRefreshes",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC HourlyDashboardRefreshes",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m HourlyDashboardResults -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce HourlyDashboardResults",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC HourlyDashboardResults",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m HourlyDashboardStatuses -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce HourlyDashboardStatuses",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC HourlyDashboardStatuses",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m HourlySyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce HourlySyncReportRuns",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC HourlySyncReportRuns",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m HourlyTimeBasedWorkflow -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce HourlyTimeBasedWorkflow",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC HourlyTimeBasedWorkflow",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m MassEmail -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce MassEmail",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC MassEmail",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m SingleEmail -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce SingleEmail",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC SingleEmail",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      },
+      {
+         "alert_from_failure" : "1",
+         "args" : "-m StreamingApiConcurrentClients -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "attribute" : null,
+         "calculate_rate" : "",
+         "cascaded_from" : null,
+         "check_attempts" : "3",
+         "check_freshness" : "1",
+         "check_interval" : "300",
+         "checktype" : {
+            "name" : "Active Plugin"
+         },
+         "critical_comparison" : null,
+         "critical_value" : null,
+         "dependencies" : [],
+         "description" : "Check Salesforce StreamingApiConcurrentClients",
+         "event_handler" : "",
+         "flap_detection_enabled" : "1",
+         "invertresults" : "0",
+         "label" : null,
+         "level" : 0,
+         "markdown_filter" : "0",
+         "name" : "SFDC StreamingApiConcurrentClients",
+         "notification_interval" : null,
+         "notification_options" : "w,c,r,u,f",
+         "oid" : null,
+         "plugin" : {
+            "name" : "check_sf_overview.pl"
+         },
+         "retry_check_interval" : "60",
+         "sensitive_arguments" : "1",
+         "servicegroup" : {
+            "name" : "Cloud - Salesforce"
+         },
+         "snmptraprules" : [],
+         "stale_state" : "0",
+         "stale_text" : "",
+         "stale_threshold_seconds" : "3600",
+         "stalking" : null,
+         "volatile" : "0",
+         "warning_comparison" : null,
+         "warning_value" : null
+      }
+   ],
+   "servicegroup" : [
+      {
+         "name" : "Cloud - Salesforce"
+      }
+   ]
+}
