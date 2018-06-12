@@ -1,0 +1,5 @@
+NAME=com.opsview.opspack.cloud_salesforce
+VERSION=1.0
+ALIAS=Cloud - Salesforce
+DEPENDENCIES=com.opsview.opspack.cloud_service_cloud
+OPSVIEW_MIN_VERSION=
