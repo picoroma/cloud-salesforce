@@ -3,3 +3,4 @@ VERSION=2.0
 ALIAS=Cloud - Salesforce
 DEPENDENCIES=com.opsview.opspack.cloud_service_cloud
 OPSVIEW_MIN_VERSION=6.0.0
+STATUS=stable

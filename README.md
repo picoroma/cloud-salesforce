@@ -1,5 +1,4 @@
-
-# Salesforce Opspack
+# Cloud - Salesforce Opspack
 
 Salesforce is a cloud computing company that is one of the leading organizations advocating the shift to socially connected businesses. Their customer relationship management (CRM) tool is their most profitable and recognizable product, but Salesforce also capitalizes on commercial applications of social networking through acquisition. With the Salesforce Opspack, users are able to build more meaningful and lasting relationships and connect with customers across sales, customer service, marketing, communities, apps, and analytics.
 
@@ -38,20 +37,26 @@ Business Service Monitoring is a great way to tie dependencies and alerting your
 
 ## Setup and Configuration
 
-To configure and utilize this Opspack, you simply need to add the 'Cloud - Salesforce' Opspack your Opsview Monitor system.
+#### Step 1: Add the host template
 
-Step 1: Add the host template
+Add the **Cloud - Salesforce** Host Template to your Opsview Monitor host.
 
 ![Add host template](/docs/img/add_salesforce_host.png?raw=true)
 
-Step 2: Configure the variables for SALESFORCE_LOGIN and SALESFORCE_AUTH as required
+> For more information, refer to [Opsview Knowledge Center - Adding Host Templates to Hosts](https://knowledge.opsview.com/docs/host#section-host-templates).
 
-**SALESFORCE_AUTH** - Add this variable to the host. Within this variable you will need to provide a valid SalesForce Token, Client key and Client secret. If you do not have these on hand, please contact your SalesForce administrator.
+#### Step 2: Add and configure variables required for this host
 
-**SALESFORCE_LOGIN** - Add this variable to the host.  Within this variable you will need to provide a valid SalesForce username and password.
+| Variable | Description |
+|:-------- |:----------- |
+| SALESFORCE_AUTH | Within the override of this variable, you will need to provide a valid SalesForceToken, Client key and Client secret. If you do not have these on hand, please contact your SalesForce administrator. |
+| SALESFORCE_LOGIN | Provide credentials for a Salesforce.com accound, overriding both the Username and Password |
 
 ![Add variables](/docs/img/configure_salesforce_variables.png?raw=true)
+![Add variables](/docs/img/configure_salesforce_variables2.png?raw=true)
 
-Step 3: Reload and the system will now be monitored
+> For more information, refer to [Opsview Knowledge Center - Adding Variables to Hosts](https://knowledge.opsview.com/docs/adding-a-new-variable#section-adding-a-variable-to-a-host).
+
+#### Step 3: Apply changes and the system will now be monitored
 
 ![View Service Checks](/docs/img/salesforce_service_checks.png?raw=true)
