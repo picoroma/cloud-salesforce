@@ -126,7 +126,7 @@
    "servicecheck" : [
       {
          "alert_from_failure" : "1",
-         "args" : "-m ConcurrentAsyncGetReportInstances -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m ConcurrentAsyncGetReportInstances -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -169,7 +169,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m ConcurrentSyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m ConcurrentSyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -212,7 +212,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DailyApiRequests -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DailyApiRequests -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -255,7 +255,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DailyAsyncApexExecutions -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DailyAsyncApexExecutions -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -298,7 +298,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DailyBulkApiRequests -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DailyBulkApiRequests -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -341,7 +341,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DailyGenericStreamingApiEvents -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DailyGenericStreamingApiEvents -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -384,7 +384,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DailyStreamingApiEvents -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DailyStreamingApiEvents -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -427,7 +427,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DailyWorkflowEmails -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DailyWorkflowEmails -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -470,7 +470,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m DataStorageMB -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m DataStorageMB -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -513,7 +513,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m FileStorageMB -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m FileStorageMB -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -556,7 +556,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m HourlyAsyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m HourlyAsyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -599,7 +599,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m HourlyDashboardRefreshes -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m HourlyDashboardRefreshes -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -642,7 +642,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m HourlyDashboardResults -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m HourlyDashboardResults -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -685,7 +685,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m HourlyDashboardStatuses -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m HourlyDashboardStatuses -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -728,7 +728,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m HourlySyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m HourlySyncReportRuns -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -771,7 +771,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m HourlyTimeBasedWorkflow -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m HourlyTimeBasedWorkflow -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -814,7 +814,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m MassEmail -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m MassEmail -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -857,7 +857,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m SingleEmail -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m SingleEmail -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
@@ -900,7 +900,7 @@
       },
       {
          "alert_from_failure" : "1",
-         "args" : "-m StreamingApiConcurrentClients -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://login.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i eu3",
+         "args" : "-m StreamingApiConcurrentClients -u '%SALESFORCE_LOGIN:1%' -p '%SALESFORCE_LOGIN:2%' -T '%SALESFORCE_AUTH:1%' -H https://%SALESFORCE_LOGIN:3%.salesforce.com -k '%SALESFORCE_AUTH:2%' -s '%SALESFORCE_AUTH:3%' -w 4 -c 6 -i '%SALESFORCE_LOGIN:4%",
          "attribute" : null,
          "calculate_rate" : "",
          "cascaded_from" : null,
